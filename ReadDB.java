@@ -30,9 +30,9 @@ public class ReadDBFile {
 	public Object[][] readDB() throws ClassNotFoundException, SQLException{
 		
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  
-		String connectionUrl = "jdbc:sqlserver://DESKTOP-6A7BK1O;DatabaseName=loginDB;integratedSecurity=true";
-		//String connectionUrl = "jdbc:sqlserver://DESKTOP-6A7BK1O;database=loginDB;integratedSecurity=true";  
-		Connection con = DriverManager.getConnection(connectionUrl,"sa","root123");  
+		String connectionUrl = "jdbc:sqlserver://localhost;DatabaseName=loginDB;integratedSecurity=true";
+		
+		Connection con = DriverManager.getConnection(connectionUrl,"**","*******");  
 		Statement stmt=con.createStatement(); 
 		ResultSet rs=stmt.executeQuery("select * from login"); 
 		
